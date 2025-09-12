@@ -1,7 +1,6 @@
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.conftest import scipy_datasets_require_network
 from sklearn.preprocessing import MinMaxScaler
 
 # Path to the save model and its components
