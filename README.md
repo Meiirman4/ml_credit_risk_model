@@ -55,6 +55,16 @@ Then open the URL shown in the terminal (usually http://localhost:8501
 
 - **Rating** (e.g., ```A / B / C``` or similar, depending on your helper logic)
 
+## The Streamlit UI
+![Stramlit UI](https://github.com/Meiirman4/ml_credit_risk_model/blob/main/preview.png?raw=true)
+
+## Feature Importance (Logistic Regression)
+
+![Feature importance](https://github.com/Meiirman4/ml_credit_risk_model/blob/main/feature_importance.png?raw=true)
+
+**What this shows**  
+These are the model **coefficients**. Bars to the **right (positive)** push the prediction **toward higher default risk**; bars to the **left (negative)** push it **toward lower risk**. The **longer** the bar, the **stronger** the effect (given the same feature scaling).
+
 ## Help
 
 Port already in use (8501)
