@@ -6,27 +6,26 @@ This project estimates a credit risk score from user financial/behavioral inform
 
 What’s inside:
 
-prediction_helper.py — loads the trained model, preprocesses inputs, and returns (probability, credit_score, rating).
+- ```prediction_helper.py``` — loads the trained model, preprocesses inputs, and returns ```(probability, credit_score, rating)```.
 
-main.py — Streamlit app with inputs for age, income, loan details, delinquencies, utilization, etc.
+- ```main.py``` — Streamlit app with inputs for age, income, loan details, delinquencies, utilization, etc.
 It also displays a computed Loan-to-Income Ratio (for reference).
 
-artifacts/ — stores your trained model file (e.g., model_data.joblib).
+- ```artifacts/``` — stores your trained model file (e.g., ```model_data.joblib```).
 
-Note: UI fields Delinquency Ratio and Credit Utilization Ratio are entered as percent values (0–100) in the app.
+Note: UI fields **Delinquency Ratio** and **Credit Utilization Ratio** are entered as **percent values (0–100)** in the app.
 
 ## Getting Started
 
 ### Dependencies
 
-Python: 3.10.12 
+**Python:** 3.10+
 
-runtime
-
-Packages: scikit-learn, pandas, numpy, joblib (plus xgboost and streamlit if you plan to use them later). See requirements.txt for exact versions.
+**Python packages:** ```streamlit, scikit-learn, pandas, numpy, joblib
+(install via requirements.txt)```
 
 ### Installing
-
+```
 git clone https://github.com/<your-username>/credit-risk-score.git
 cd credit-risk-score
 
@@ -37,47 +36,47 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
-
+```
+Place your trained model (e.g., ```model_data.joblib```) in ```artifacts/``` and make sure ```prediction_helper.py``` points to that path.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+Run the Streamlit app:
+
 ```
-code blocks for commands
+streamlit run main.py
 ```
+Then open the URL shown in the terminal (usually http://localhost:8501
+), fill the form, and click **“Calculate Risk”** to see:
+
+- **Default Probability** (e.g., 23.5%)
+
+- **Credit Score** (numeric score)
+
+- **Rating** (e.g., ```A / B / C``` or similar, depending on your helper logic)
 
 ## Help
 
-Any advise for common problems or issues.
+Port already in use (8501)
 ```
-command to run if program contains helper info
+# macOS/Linux
+lsof -i :8501
+kill -9 <PID>
+# Windows
+netstat -ano | findstr :8501
+taskkill /PID <PID> /F
 ```
+Model file not found
+- Confirm the model exists at ```artifacts/model_data.joblib``` (or update the path used in ```prediction_helper.py```).
+
 
 ## Authors
 
-Contributors names and contact info
+- **Meiirman Kydyrgaliyev** — LinkedIn profile
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+this project was curated by: 
+* https://codebasics.io/
+* https://www.linkedin.com/in/dhavalsays/
