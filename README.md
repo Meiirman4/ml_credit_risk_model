@@ -70,13 +70,8 @@ Model file not found
 - Confirm the model exists at ```artifacts/model_data.joblib``` (or update the path used in ```prediction_helper.py```).
 
 
-## Authors
-
-- **Meiirman Kydyrgaliyev** — LinkedIn profile
-
-
 ## Acknowledgments
 
-this project was curated by: 
+**This project was curated by**: 
 * https://codebasics.io/
 * https://www.linkedin.com/in/dhavalsays/
