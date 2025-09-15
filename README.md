@@ -1,4 +1,4 @@
-# Credit Risk Score Calculator
+# Credit Risk Score Prediction
 [![Open in Streamlit](https://img.shields.io/badge/Launch%20App-Streamlit-FF4B4B?logo=streamlit)](https://credit-risk-score-model.streamlit.app/)
 
 This project estimates a credit risk score from user financial/behavioral information. Feature engineering and modeling use scikit-learn, with a baseline LinearRegression model. A simple Streamlit UI lets you input features and see the predicted default probability, credit score, and a rating.
